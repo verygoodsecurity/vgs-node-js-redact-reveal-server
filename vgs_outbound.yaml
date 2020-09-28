@@ -1,0 +1,50 @@
+data:
+  - attributes:
+      created_at: '2020-09-28T17:32:08'
+      destination_override_endpoint: '*'
+      entries:
+        - classifiers: {}
+          config:
+            condition: AND
+            rules:
+              - condition: null
+                expression:
+                  field: PathInfo
+                  operator: matches
+                  type: string
+                  values:
+                    - /reveal
+              - condition: null
+                expression:
+                  field: ContentType
+                  operator: equals
+                  type: string
+                  values:
+                    - application/json
+          id: b7bb3530-caeb-4be2-8158-8bef6d01f1c0
+          id_selector: null
+          operation: ENRICH
+          operations: null
+          phase: REQUEST
+          public_token_generator: UUID
+          targets:
+            - body
+          token_manager: PERSISTENT
+          transformer: JSON_PATH
+          transformer_config:
+            - $.test
+          transformer_config_map: null
+          type: null
+      host_endpoint: <ngrokID>.ngrok.io
+      id: 589334e7-2fa7-4072-8c65-b3d6f04fe25a
+      ordinal: null
+      port: 80
+      protocol: http
+      source_endpoint: '*'
+      tags:
+        name: light-pink-rhombus
+        source: RouteContainer
+      updated_at: '2020-09-28T19:57:41'
+    id: 589334e7-2fa7-4072-8c65-b3d6f04fe25a
+    type: rule_chain
+version: 1
